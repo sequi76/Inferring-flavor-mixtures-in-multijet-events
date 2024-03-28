@@ -85,3 +85,11 @@ All the results that come from the .bash runs end up in this directory.  That is
 
 option in the '/make/local' configuration file
 
+- To copmile the .stan files you need to compile then from the home directory using, for instance, this command
+
+make models/unimode/1D-unimode2\_symmetric\_Dirichtlet
+
+## 4- Last wishes
+
+Good luck and write to sequi@unsam.edu.ar if you need further assistance!
+
