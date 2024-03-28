@@ -13,7 +13,7 @@ and you unpack the tarball (and run make of course, see <a href='https://github.
 
 ## 2- Each Directory content, purpose, and how to use it
 
-### Directory: '/' (This directory)
+### 2a- Directory: '/' (This directory)
 
 You find in this directory some '.bash' files that when you run them it runs cmdstan with the specific choices (see below).  The current '.bash' files now are just for the sake of exemplify.  In a true situation, these files are created with some Python notebooks in 'models/notebooks' as you'll see below.
 
@@ -25,30 +25,30 @@ When you run these '.bash' files they create the output of the run in 'models/no
 - pe = Point Estimate
 
 
-### Directory: '/models/'
+### 2b- Directory: '/models/'
 
 Directory containing 4 directories with the stan scripts for each model and the .json files for each run of each model.
 
-### Directory: 'models/gp'
+### 2c- Directory: 'models/gp'
 
 Contains the running files for the model Gaussian process, for instance:
 
 - 'gp1\_no-correlation\_parallel.stan':  Stan script that when compiled creates an executable with the same name (without the .stan at the end).  It is executed from the basg files in the home '/' directory
 - '04-02-2024.23.59Dr.json': json file which is the dictionary needed to run the executable stan script.  It contains, for instance, the mean priors, and also the synthetic data sampled in the given instance of the run.  This file is created from the notebooks in '/models/notebooks'
 
-### Directory: 'models/dirichlet'
+### 2d- Directory: 'models/dirichlet'
 
 idem as before, but for model Dirichlet
 
-### Directory: 'models/unimode'
+### 2e- Directory: 'models/unimode'
 
 idem as before, but for model Unimode
 
-### Directory: 'models/point-estimate'
+### 2f- Directory: 'models/point-estimate'
 
 idem as before, but for model Point Estimate
 
-### Directory: '/models/notebooks'
+### 2g- Directory: '/models/notebooks'
 
 This directory contains the Python notebooks from which everything is created
 
@@ -63,4 +63,23 @@ This notebook is similar to the 1D, just that now samples the data in 4D, and cr
 
 You should read the functions that generate the data, the json files, the bash files, etc.  You need to understand themto understand how to use them properly.  In any case, at the end of the notebook there are a few examples on how to run each function.
 
+- 'full-process-results.ipynb'
+
+Notebook to process all the runs of a given seed.  
+
+As it is currently the notebook you need to have computed the N=100, 250 and 500 for the all four models, and also the 1D cases in order to get all the figures that are in the paper.  Obviously that if you start to play with this you sohuld take apart some of the defined functions and copmute your priors, or some outputs, or fractions, or distributions, and see how they look like.
+
+
+### 2e- Directory '/models/notebooks/results'
+
+All the results that come from the .bash runs end up in this directory.  That is, all the samples from the posterior in each inference case.
+
+## 3- Sone notes to take into account
+
+- In this repo there are a few results .csv, .bash and .json files just fo the sake of exmeplifying.  We couldn't load all of the run in the paper because of size limit.
+- All this has been run in Ubuntu 20 LTS
+- Before running anything, when you run make to compile cmdstan, you need to compile with the 
+\# Enable threading
+ STAN\_THREADS=true
+option in the '/make/local' configuration file
 
