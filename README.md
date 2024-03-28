@@ -9,4 +9,21 @@ The files in this repo are in directories with a precise structure to be merged 
 
 https://github.com/stan-dev/cmdstan/releases/latest
 
-and youunpack the tarball (and run make of course, see <a href='https://github.com/stan-dev/cmdstan'>instructions</a>), then you'll get a directory with a subdirectory <i>models/</i>.  Then, 'merging' this repo into that CMDSTAN installation means putting everything that is in this directory <i>models/</i> into the CMDSTAN directory with the same name.  But do not copy the directory, but its contents (otherwise you'll delete the CMDSTAN original content in that directory).
+and you unpack the tarball (and run make of course, see <a href='https://github.com/stan-dev/cmdstan'>instructions</a>), then you'll get a directory with a subdirectory <i>models/</i>.  Then, 'merging' this repo into that CMDSTAN installation means putting everything that is in this directory <i>models/</i> into the CMDSTAN directory with the same name.  But do not copy the directory, but its contents (otherwise you'll delete the CMDSTAN original content in that directory).
+
+## Each Directory content, purpose, and how to use it
+
+### '/' (This directory)
+
+You find in this directory some '.bash' files that when you run them it runs cmdstan with the specific choices (see below).  The current '.bash' files now are just for the sake of exemplify.  In a true situation, these files are created with some Python notebooks in 'models/notebooks' as you'll see below.
+
+When you run these '.bash' files they create the output of the run in 'models/notebook/results/'.  This output is then analyzed with the corresponding notebooks in 'models/notebooks'.  Each run is tagged with a key in the form e.g. '03-03-2024.22.57UM', where obviously this means the creation date, and the 2 last letters indicate which model has been used
+
+- dr = Dirichlet
+- hs = Gaussian process
+- um = Unimodal
+- pe = Point Estimate
+
+
+### '/models/'
+
