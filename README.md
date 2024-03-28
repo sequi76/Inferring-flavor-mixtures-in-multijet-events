@@ -33,5 +33,34 @@ Directory containing 4 directories with the stan scripts for each model and the 
 
 Contains the running files for the model Gaussian process, for instance:
 
-- 'gp1\_no-correlation\_parallel.stan': 
+- 'gp1\_no-correlation\_parallel.stan':  Stan script that when compiled creates an executable with the same name (without the .stan at the end).  It is executed from the basg files in the home '/' directory
+- '04-02-2024.23.59Dr.json': json file which is the dictionary needed to run the executable stan script.  It contains, for instance, the mean priors, and also the synthetic data sampled in the given instance of the run.  This file is created from the notebooks in '/models/notebooks'
+
+### Directory: 'models/dirichlet'
+
+idem as before, but for model Dirichlet
+
+### Directory: 'models/unimode'
+
+idem as before, but for model Unimode
+
+### Directory: 'models/point-estimate'
+
+idem as before, but for model Point Estimate
+
+### Directory: '/models/notebooks'
+
+This directory contains the Python notebooks from which everything is created
+
+- '1D-cmdstan-bash-generator.ipynb'
+
+This notebook creates the files '1D-gp.bash', '1D-dirichlet.bash', '1D-unimode.bash' and '1D-point-estimate.bash' present in this '/' directory. In the notebook you'll find the four corresponding functions and how to call them.  You must specify things like the number of data-points, the seed, the prior means, etc.  This bash files run the stan scripts to infer the posteriors in th 1-dimensional examples.
+
+
+- '4D-cmdstan-bash-generator.ipynb'
+
+This notebook is similar to the 1D, just that now samples the data in 4D, and creates the corresponding 4D bash files, namely: 'gp.bash', 'dirichlet.bash', 'unimode.bash', and 'point-estimate.bash'.  
+
+You should read the functions that generate the data, the json files, the bash files, etc.  You need to understand themto understand how to use them properly.  In any case, at the end of the notebook there are a few examples on how to run each function.
+
 
