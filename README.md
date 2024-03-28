@@ -79,7 +79,9 @@ All the results that come from the .bash runs end up in this directory.  That is
 - In this repo there are a few results .csv, .bash and .json files just fo the sake of exmeplifying.  We couldn't load all of the run in the paper because of size limit.
 - All this has been run in Ubuntu 20 LTS
 - Before running anything, when you run make to compile cmdstan, you need to compile with the 
+
 \# Enable threading
  STAN\_THREADS=true
+
 option in the '/make/local' configuration file
 
