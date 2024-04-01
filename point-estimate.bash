@@ -3,7 +3,6 @@ name="29-02-2024.23.30PE"
 results_dir="models/notebooks/results"
 if ls $results_dir/$name*csv 1> /dev/null 2>&1; then
         echo "File exsits!"
-        echo "pelotudooooo"
         exit 1
 else
         echo 'ok seguimos'
