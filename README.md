@@ -76,7 +76,7 @@ As it is currently the notebook you need to have computed the N=100, 250 and 500
 
 All the results that come from the .bash runs end up in this directory.  That is, all the samples from the posterior in each inference case.
 
-## 3- Sone notes to take into account
+## 3- Some notes to take into account
 
 - In this repo there are a few results .csv, .bash and .json files just fo the sake of exmeplifying.  We couldn't load all of the run in the paper because of size limit.
 - All this has been run in Ubuntu 20 LTS
@@ -87,9 +87,11 @@ All the results that come from the .bash runs end up in this directory.  That is
 
 option in the '/make/local' configuration file
 
-- To copmile the .stan files you need to compile then from the home directory using, for instance, this command
+- To compile the .stan files you need to compile then from the home directory using, for instance, this command
 
 make models/unimode/1D-unimode2\_symmetric\_Dirichtlet
+
+- We are including 4 PDf files in the current directory that contains the full results for the  seed=0, 10, 30 and 10000 results
 
 ## 4- Last wishes
 
