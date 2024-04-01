@@ -11,6 +11,8 @@ https://github.com/stan-dev/cmdstan/releases/latest
 
 and you unpack the tarball (and run make of course, see <a href='https://github.com/stan-dev/cmdstan'>instructions</a>), then you'll get a directory with a subdirectory <i>models/</i>.  Then, 'merging' this repo into that CMDSTAN installation means putting everything that is in this directory <i>models/</i> into the CMDSTAN directory with the same name.  But do not copy the directory, but its contents (otherwise you'll delete the CMDSTAN original content in that directory).
 
+[Observe, in any case, that if you want to use <b>pystan</b> (the Python version for Stan), then you should: i) Collect the .stan files from models/gp, models/dirichlet, models/unimode, models/point-estimate and use them direct;y in <b>pystan</b>; ii) Use the notebooks in models/notebooks to generate the synthetic data to feed the Stan models.  However you'll not be taking profit of all the power of the notebooks that are already organized to just generate data, run it and analyze it.  But we understand it if you really don't want to go to the command-line Stan version.]
+
 ## 2- Each Directory content, purpose, and how to use it
 
 ### 2a- Directory: '/' (This directory)
