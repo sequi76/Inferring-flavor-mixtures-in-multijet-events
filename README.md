@@ -1,7 +1,7 @@
 # Inferring-flavor-mixtures-in-multijet-events
 Codes and datasets for paper Inferring flavor mixtures in multijet events (Y.Yao &amp; E.Alvarez)
 
-Warning: take your time to read this readme file because otherwise it is very hard to understand what there is in this repo and how to use it
+Warning: take your time to read this readme file because otherwise it is very hard to understand what there is in this repo and how to use it.
 
 ## 1- Big Picture
 
