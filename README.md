@@ -1,5 +1,5 @@
 # Inferring-flavor-mixtures-in-multijet-events
-Codes and datasets for paper Inferring flavor mixtures in multijet events (Y.Yao &amp; E.Alvarez)
+Codes and datasets for paper Inferring flavor mixtures in multijet events (Y.Yao &amp; E.Alvarez) <a href='https://arxiv.org/abs/2404.01387'>2404.01387</a>
 
 Warning: take your time to read this readme file because otherwise it is very hard to understand what there is in this repo and how to use it.
 
